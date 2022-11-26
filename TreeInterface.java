@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public interface TreeInterface<T> {
 	public T getRootData();
     public int getHeight();

@@ -70,26 +70,19 @@ public class BinaryTree<T> implements BinaryTreeInterface<T> {
 
 
 	public Iterator<T> getPreorderIterator() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("getPreorderIterator");
 	}
-
 
 	public Iterator<T> getPostorderIterator() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("getPostorderIterator");
 	}
-
 
 	public Iterator<T> getInorderIterator() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("getInorderIterator");
 	}
 
-
 	public Iterator<T> getLevelOrderIterator() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("getLevelOrderIterator");
 	}
 
 	
