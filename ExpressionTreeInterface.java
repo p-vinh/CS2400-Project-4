@@ -1,4 +1,4 @@
-public interface ExpressionTreeInterface<String> extends BinaryTreeInterface<String> {
+public interface ExpressionTreeInterface extends BinaryTreeInterface<String> {
 	/**
 	 * Computes the value of the expression in this tree.
 	 * 

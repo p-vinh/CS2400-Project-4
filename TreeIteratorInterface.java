@@ -1,8 +1,8 @@
+import java.util.Iterator;
+
 public interface TreeIteratorInterface<T> {
-
-	public boolean hasNext();
-
-	public T next();
-	
-	public T remove();
+	public Iterator<T> getPreorderIterator();
+	public Iterator<T> getPostorderIterator();
+	public Iterator<T> getInorderIterator();
+	public Iterator<T> getLevelOrderIterator();
 }
