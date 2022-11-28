@@ -1,3 +1,13 @@
+// 
+//  Name:		Pham, Vinh 
+//  Project:	4
+//  Due:		21 Novmeber 2022 
+//  Course:		cs-2400-02-f22 
+// 
+//  Description: 
+//    A data structure that contains a left and right node and data in itself
+//    
+
 public class BinaryNode<T> {
     private T data;
     private BinaryNode<T> leftChild;

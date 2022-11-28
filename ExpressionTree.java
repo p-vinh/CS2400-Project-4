@@ -1,3 +1,14 @@
+// 
+//  Name:		Pham, Vinh 
+//  Project:	4
+//  Due:		21 Novmeber 2022 
+//  Course:		cs-2400-02-f22 
+// 
+//  Description: 
+//    Expression tree class creates a tree with a given postfix expression.
+//    It is able to postorder traverse to print the contents and compute the given postfix expression
+// 
+
 public class ExpressionTree extends BinaryTree<String> implements ExpressionTreeInterface {
 
 	public ExpressionTree(String[] postfix) {

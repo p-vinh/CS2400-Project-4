@@ -1,3 +1,15 @@
+// 
+//  Name:		Pham, Vinh 
+//  Project:	4
+//  Due:		21 Novmeber 2022 
+//  Course:		cs-2400-02-f22 
+// 
+//  Description: 
+//    Contains all the methods of the BinaryTree
+//    Initializes the tree in the constructor
+// 
+
+
 import java.util.Iterator;
 
 public class BinaryTree<T> implements BinaryTreeInterface<T> {

@@ -1,3 +1,13 @@
+// 
+//  Name:		Pham, Vinh 
+//  Project:	4
+//  Due:		21 Novmeber 2022 
+//  Course:		cs-2400-02-f22 
+// 
+//  Description: 
+//    Expression test class is the driver class to get an postfix expression from the user
+//    Then prints the input and the answer of the expression as well as the postorder traversal
+// 
 public class ExpressionTest {
 	public static void main(String[] args) {
 		String[] postfix = args[0].split(" ");

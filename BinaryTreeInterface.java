@@ -1,3 +1,12 @@
+// 
+//  Name:		Pham, Vinh 
+//  Project:	4
+//  Due:		21 Novmeber 2022 
+//  Course:		cs-2400-02-f22 
+// 
+//  Description: 
+//    Binary tree interface to work with binary trees
+
 public interface BinaryTreeInterface<T> extends TreeInterface<T>, TreeIteratorInterface<T> {
 
 	/**
