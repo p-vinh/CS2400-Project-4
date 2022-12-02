@@ -30,7 +30,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T> {
 
 	public void setTree(T rootData, BinaryTreeInterface<T> leftTree, BinaryTreeInterface<T> rightTree) {
 		initializeTree(rootData, (BinaryTree<T>) leftTree, (BinaryTree<T>) rightTree);
-	} // end setTree
+	}
 
 	private void initializeTree(T rootData, BinaryTree<T> leftTree, BinaryTree<T> rightTree) {
 		root = new BinaryNode<T>(rootData);

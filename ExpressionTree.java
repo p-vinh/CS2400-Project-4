@@ -9,6 +9,8 @@
 //    It is able to postorder traverse to print the contents and compute the given postfix expression
 // 
 
+
+
 public class ExpressionTree extends BinaryTree<String> implements ExpressionTreeInterface {
 
 	public ExpressionTree(String[] postfix) {
@@ -32,22 +34,7 @@ public class ExpressionTree extends BinaryTree<String> implements ExpressionTree
 	}
 
 	private void postorder(BinaryNode<String> rootNode) {
-		// int height = rootNode.getHeight();
 
-		// for (int i = 1; i <= height; i++) {
-		// for (int j = height; j <= 0; j--) {
-		// System.out.print("\t");
-		// }
-		// if(!rootNode.isLeaf()) {
-		// System.out.println(rootNode.getData());
-		// if (!rootNode.getLeftChild().isLeaf()) {
-		// System.out.println(rootNode.getLeftChild().getData());
-		// }
-		// if (!rootNode.getRightChild().isLeaf()) {
-		// System.out.println(rootNode.getRightChild().getData());
-		// }
-		// }
-		// }
 		if (!rootNode.isLeaf()) {
 			if (!rootNode.getLeftChild().isLeaf())
 				postorder(rootNode.getLeftChild());
@@ -63,6 +50,7 @@ public class ExpressionTree extends BinaryTree<String> implements ExpressionTree
 		System.out.println(rootNode.getLeftChild().getData() + " : " + rootNode.getData() + " : "
 				+ rootNode.getRightChild().getData());
 	}
+
 
 	public double evaluate() {
 		return evaluate(getRootNode());
