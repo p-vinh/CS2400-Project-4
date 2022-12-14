@@ -9,25 +9,39 @@
 //    It is able to postorder traverse to print the contents and compute the given postfix expression
 // 
 
-
-
 public class ExpressionTree extends BinaryTree<String> implements ExpressionTreeInterface {
 
-	public ExpressionTree(String[] postfix) {
+	public ExpressionTree(String[] prefix) {
 		LinkedStack<BinaryTree<String>> stack = new LinkedStack<>();
 
-		for (String str : postfix) {
-			if (!isOperator(str)) {
-				stack.push(new BinaryTree<String>(str));
+		for (int i = prefix.length - 1; i >= 0; i--) {
+			if (!isOperator(prefix[i])) {
+				stack.push(new BinaryTree<String>(prefix[i]));
 			} else {
-				BinaryTree<String> rhs = stack.pop();
 				BinaryTree<String> lhs = stack.pop();
-				stack.push(new BinaryTree<>(str, lhs, rhs));
+				BinaryTree<String> rhs = stack.pop();
+				stack.push(new BinaryTree<String>(prefix[i], lhs, rhs));
 			}
 		}
 
 		this.setRootNode(stack.pop().getRootNode());
 	}
+
+	// public ExpressionTree(String[] postfix) {
+	// LinkedStack<BinaryTree<String>> stack = new LinkedStack<>();
+
+	// for (String str : postfix) {
+	// if (!isOperator(str)) {
+	// stack.push(new BinaryTree<String>(str));
+	// } else {
+	// BinaryTree<String> rhs = stack.pop();
+	// BinaryTree<String> lhs = stack.pop();
+	// stack.push(new BinaryTree<>(str, lhs, rhs));
+	// }
+	// }
+
+	// this.setRootNode(stack.pop().getRootNode());
+	// }
 
 	public void postorder() {
 		postorder(getRootNode());
@@ -51,6 +65,28 @@ public class ExpressionTree extends BinaryTree<String> implements ExpressionTree
 				+ rootNode.getRightChild().getData());
 	}
 
+	public void preorder() {
+		preorder(getRootNode());
+	}
+
+	// its wrong
+	private void preorder(BinaryNode<String> rootNode) {
+		if (!rootNode.isLeaf())
+			System.out.println(rootNode.getData());
+
+		if (!rootNode.getLeftChild().isLeaf())
+			preorder(rootNode.getLeftChild());
+		else
+			System.out.println(rootNode.getLeftChild().getData());
+		System.out.println(rootNode.getLeftChild().getData() + " : " +
+				rootNode.getData() + " : "
+				+ rootNode.getRightChild().getData());
+		if (!rootNode.getRightChild().isLeaf())
+			preorder(rootNode.getRightChild());
+		else
+			System.out.println(rootNode.getRightChild().getData());
+
+	}
 
 	public double evaluate() {
 		return evaluate(getRootNode());

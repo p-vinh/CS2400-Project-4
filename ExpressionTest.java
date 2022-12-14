@@ -10,19 +10,19 @@
 // 
 public class ExpressionTest {
 	public static void main(String[] args) {
-		String[] postfix = args[0].split(" ");
-		ExpressionTree tree = new ExpressionTree(postfix);
+		String[] prefix = "+ a * b c".split(" ");
+		ExpressionTree tree = new ExpressionTree(prefix);
 
 		System.out.println("Expression Tree by V. Pham\n");
 		System.out.print("Input: ");
 
-		for (String str : postfix) {
+		for (String str : prefix) {
 			System.out.print(str + " ");
 		}
 
 		System.out.println();
-		System.out.println("Value: " + tree.evaluate() + "\n");
+		// System.out.println("Value: " + tree.evaluate() + "\n");
 		System.out.println("Postorder Traversal:");
-		tree.postorder();
+		tree.preorder();
 	}
 }
